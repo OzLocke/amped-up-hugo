@@ -1,4 +1,4 @@
-  Your site uses the [AMP framework](https://amp.dev). Make sure to adhere to it!
+ >Your site uses the [AMP framework](https://amp.dev). Make sure to adhere to it!
 
 To use this project you'll need to first setup Hugo: https://gohugo.io/getting-started/quick-start/
 
