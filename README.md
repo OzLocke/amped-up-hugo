@@ -8,4 +8,4 @@ There's just enough there already to enable you to run the site and have some ba
 
 ![The site as it looks when run without changes](https://github.com/stephlocke/lazyCDN/blob/master/site.png?raw=true)
 
-From here you can add your own theme, and build your site as usual. Just remember to update the config.toml file with your details, and the associated logo files.
+From here you can add your own theme, and build your site as usual. Just remember to update the config.toml file with your details and the associated logo files, and update or delete the netlify.toml as needed.
