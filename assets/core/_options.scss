@@ -1,0 +1,378 @@
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+
+// **************************
+// Core
+// **************************
+$enable-amp-caret:   																	false;
+$enable-amp-prefers-reduced-motion-media-query:   		false;
+$enable-amp-hover-media-query:                    		false; // Deprecated, no longer affects any compiled CSS
+$enable-amp-grid-classes:                         		false;
+$enable-amp-responsive-font-sizes:               			false;
+$enable-amp-validation-icons:                     		false;
+$enable-amp-deprecation-messages:                 		false;
+$enable-amp-root:																			false;
+$enable-amp-reboot:																		false;
+$enable-amp-transitions:                          		false;
+$enable-amp-rounded:                              		false;
+$enable-amp-shadows:                              		false;
+$enable-amp-backgrounds:                            	false;
+$enable-amp-gradients:                            		false;
+
+$enable-amp-button-pointer-cursor:           					true;
+
+$enable-amp-print-styles:                         		false;
+
+
+// Reboot
+$enable-amp-legend:																		false;
+$enable-amp-fieldset:																	false;
+
+
+// **************************
+// Components
+// **************************
+
+
+// Badge
+$enable-amp-badge:																		false;	//$enable-amp-badge
+$enable-amp-badge-colors:															false;	// Depending on $enable-amp-badge
+
+
+// Breadcrumb
+$enable-amp-breadcrumb:																false;
+
+
+// buttons
+$enable-amp-button:																		true;
+$enable-amp-link-button:															true;	// Depending on $enable-amp-button
+$enable-amp-block-button:															true;	// Depending on $enable-amp-button
+$enable-amp-button-outline:														true;	// Depending on $enable-amp-button
+$enable-amp-button-disabled:													true;	// Depending on $enable-amp-button
+$enable-amp-button-colors:														true;	// Depending on $enable-amp-button
+$enable-amp-button-size-sm:														true;	// Depending on $enable-amp-button
+$enable-amp-button-size-lg:														true;	// Depending on $enable-amp-button
+
+
+// button groups
+$enable-amp-button-group:															false;
+$enable-amp-button-group-x:														false;	// Horizontal	// Depending on $enable-amp-button-group
+$enable-amp-button-group-y:														false;	// Vertical	// Depending on $enable-amp-button-group
+$enable-amp-button-group-toggle:											false;	// Depending on $enable-amp-button-group
+$enable-amp-button-group-dropdown-toggle-split:				false;	// Depending on $enable-amp-button-group
+$enable-amp-button-group-size-sm:											false;	// Depending on $enable-amp-button-group
+$enable-amp-button-group-size-lg:											false;	// Depending on $enable-amp-button-group
+
+
+// button toolbbar
+$enable-amp-button-btn-toolbar:												false;
+
+
+// Cards
+$enable-amp-card:																			true;
+$enable-amp-card-header:															true;
+$enable-amp-card-header-tabs:													true;
+$enable-amp-card-header-pills:												true;
+$enable-amp-card-body:																true;
+$enable-amp-card-footer:															true;
+$enable-amp-card-title:																true;
+$enable-amp-card-subtitle:														true;
+$enable-amp-card-text:																true;
+$enable-amp-card-link:																true;
+$enable-amp-card-images:															true;
+$enable-amp-card-deck:																true;
+$enable-amp-card-group:																true;
+$enable-amp-card-columns:															true;
+$enable-amp-card-accordion:														true;
+
+
+// Close
+$enable-amp-close:																		false;
+
+
+// Code
+$enable-amp-code:																			false;
+$enable-amp-kbd:																			false;
+$enable-amp-pre:																			false;
+$enable-amp-pre-scrollable:														false;	// Depending on $enable-amp-pre
+
+
+// Dropdown
+$enable-amp-dropdown:																	false;
+
+
+// Forms
+$enable-amp-form-group:																false;
+$enable-amp-form-text:																false;
+$enable-amp-form-row:																	false;
+$enable-amp-form-control:															false;
+$enable-amp-form-control-file:												false;
+$enable-amp-form-control-plaintext:										false;
+
+$enable-amp-form-control-size-sm:											false;	// Depending on $enable-amp-form-control
+$enable-amp-form-control-size-lg:											false;	// Depending on $enable-amp-form-control
+
+$enable-amp-form-check:																false;  // Checkboxes and radios
+
+$enable-amp-form-inline:															false;
+
+$enable-amp-col-form-label:														false;
+$enable-amp-col-form-label-size-sm:										false;	// Depending on $enable-amp-col-form-label
+$enable-amp-col-form-label-size-lg:										false;	// Depending on $enable-amp-col-form-label
+
+// Disabled form elements
+$enable-amp-form-control-disabled:										false;
+$enable-amp-form-check-disabled:											false;
+
+// Form valitations
+$enable-amp-form-valitation:													false;
+
+// Custom form
+$enable-amp-custom-forms:															false;
+
+
+// Grid
+$enable-amp-grid:																			true;
+$enable-amp-grid-gutterless:													true;
+
+
+// Rows
+$enable-amp-grid-row-cols:														true;
+
+
+// Columns
+$enable-amp-grid-columns-auto:												true;
+$enable-amp-grid-columns-offset:											true;
+$enable-amp-grid-columns-ready:												true;
+$enable-amp-grid-columns-order:												true;
+
+
+// Masonry
+$enable-amp-masonry:																	false;
+$enable-amp-masonry-images:														false;
+$enable-amp-masonry-images-ng:												false;
+
+
+// Images
+$enable-amp-img:																			true;
+$enable-amp-img-fluid:																false;
+$enable-amp-img-thumbnail:														false;
+$enable-amp-figure:																		false;
+$enable-amp-figure-img:																false;
+$enable-amp-figure-caption:														false;
+
+
+
+// Input group
+$enable-amp-input-group:															false;
+$enable-amp-input-group-append:												false;	// Depending on $enable-amp-input-group
+$enable-amp-input-group-prepend:											false;	// Depending on $enable-amp-input-group
+$enable-amp-input-group-text:													false;	// Depending on $enable-amp-input-group
+$enable-amp-input-group-size-sm:											false;	// Depending on $enable-amp-input-group
+$enable-amp-input-group-size-lg:											false;	// Depending on $enable-amp-input-group
+
+
+// Jumbotron
+$enable-amp-jumbotron:																false;
+$enable-amp-jumbotron-fluid:													false;
+
+
+// List group
+$enable-amp-list-group:																false;
+$enable-amp-list-group-item:													false;	// Depending on $enable-amp-list-group
+$enable-amp-list-group-item-action:										false;	// Depending on $enable-amp-list-group
+$enable-amp-list-group-x:															false;	// Horizontal	// Depending on $enable-amp-list-group
+$enable-amp-list-group-flush:													false;	// Depending on $enable-amp-list-group
+$enable-amp-list-group-colors:												false;	// Depending on $enable-amp-list-group
+
+
+// Media
+$enable-amp-media:																		false;
+
+
+// Nav
+$enable-amp-nav:																			true;
+$enable-amp-nav-link:																	true;
+$enable-amp-nav-tabs:																	false;
+$enable-amp-nav-pills:																false;
+$enable-amp-nav-fill:																	false;
+$enable-amp-nav-justified:														false;
+
+$enable-amp-tab-content:															false;
+
+// Disable nav elements
+$enable-amp-nav-link-disabled:												false;	// Depending on $enable-amp-nav-link
+$enable-amp-nav-tabs-diabled:													false;	// Depending on $enable-amp-nav-tabs
+
+
+// Navbar
+$enable-amp-navbar:																		true;
+
+
+// Navigation
+$enable-amp-header-navigation:												false;
+
+
+// Footer
+$enable-amp-footer:																		false;
+
+
+// Script
+$enable-amp-script:																		false;
+
+
+// Notifications
+$enable-amp-notification:															false;
+
+
+// Social share
+$enable-amp-social-share:															false;
+
+
+// Web push notification
+$enable-amp-web-push-notification:										false;
+
+
+// Pagination
+$enable-amp-pagination:																false;
+$enable-amp-pagination-size-sm:												false;	// Depending on $enable-amp-pagination
+$enable-amp-pagination-size-lg:												false;	// Depending on $enable-amp-pagination
+
+
+// Progress
+$enable-amp-progress:																	false;
+$enable-amp-progress-bar-striped:											false;	// Classes
+$enable-amp-progress-bar-animated:										false;	// Independently $enable-amp-transitions
+
+
+// Tooltip
+$enable-amp-tooltip:																	false;
+$enable-amp-tooltip-top:															false;
+$enable-amp-tooltip-bottom:														false;
+$enable-amp-tooltip-left:															false;
+$enable-amp-tooltip-right:														false;
+
+
+// Spinner
+$enable-amp-spinner:																	false;
+$enable-amp-spinner-grow:															false;
+$enable-amp-spinner-grow-size-sm:											false;	// Depending on $enable-amp-spinner-grow
+
+
+// Tables
+$enable-amp-table:																		false;
+$enable-amp-table-bordered:														false;
+$enable-amp-table-borderless:													false;
+$enable-amp-table-striped:														false;
+$enable-amp-table-hover:															false;
+$enable-amp-table-active:															false;
+$enable-amp-table-responsive:													false;
+$enable-amp-table-colors:															false;
+$enable-amp-table-sm:																	false;
+
+
+// Transition
+$enable-amp-transition-fade:													false;
+$enable-amp-transition-collapse:											false;
+$enable-amp-transition-collapsing:										false;
+
+
+// **************************
+// Utilities (/utilities/)
+// **************************
+
+// Align
+$enable-amp-align:																		false;	// class `.align-top`, `.align-bottom`
+
+// Borders
+$enable-amp-border:																		false;	// class `.border-top`, `.border-bottom`
+$enable-amp-border-rounded:														false;	// class `.border-round`
+$enable-amp-border-colors:														false;
+
+// Display
+$enable-amp-display:																	false;
+$enable-amp-display-print-classes:										false;
+
+// Embeded
+$enable-amp-embeded-classes:													false;
+
+// Flex (Flexbox)
+$enable-amp-flex-classes:															false;
+$enable-amp-justify-content-classes:									false;
+$enable-amp-align-items-classes:											false;
+$enable-amp-align-content-classes:										false;
+$enable-amp-align-self-classes:												false;
+
+// Floating
+$enable-amp-float-classes:														true;
+
+// Overflow
+$enable-amp-overflow-classes:													false;
+
+// Positions
+$enable-amp-position-classes:													false;
+$enable-amp-position-fixed-top-class:									false;
+$enable-amp-position-fixed-bottom-class:							false;
+$enable-amp-position-sticky-top-class:								false;
+
+// Screenreaders
+$enable-amp-sr-only-class:														false;
+$enable-amp-sr-only-focusable-class:									false;
+
+// Shadows
+$enable-amp-shadow-classes:														false;
+
+// Sizing (Viewport additional helpers)
+$enable-amp-sizing:																		false;
+
+// Spacing
+$enable-amp-margin-and-bottom:												true;
+$enable-amp-margin-and-bottom-negative:								true;
+$enable-amp-margin-and-bottom-special-util:						true;
+
+// Stretched-link
+$enabled-amp-stretched-link:													false;
+
+// Text
+$enable-amp-text-alignment:														true;
+$enable-amp-text-alignment-responsive:								true;
+$enable-amp-text-transformation:											true;
+$enable-amp-text-font-weight:													true;
+$enable-amp-text-italic:															true;
+$enable-amp-text-color:																true;
+$enable-amp-text-misc:																true;
+$enable-amp-text-reset:																true;
+
+// Visibility
+$enable-amp-visibility:																false;
+
+
+// **************************
+// Typography
+// **************************
+$enable-amp-headings:																	false;	// h1, h2, h3, h4, h5, h6
+$enable-amp-lead:																			false;	//class `.lead`
+
+$enable-amp-hr:																				false;	// Horizontal rules `<hr>`
+
+// Emphasis
+$enable-amp-small:																		false;	// `<small> or class .small`
+$enable-amp-mark:																			false;	// `<mark> or class .mark`
+
+// Lists
+$enable-amp-list-unstyled:														false;
+$enable-amp-list-inline:															false;
+$enable-amp-list-inline-item:													false;
+
+// Misc
+$enable-amp-initialism:																false;
+$enable-amp-blockquote:																false;
+
+// Display
+// See (https://getbootstrap.com/docs/4.4/content/typography/#display-headings)
+$enable-amp-display-1:																true;	//class `.display-1`
+$enable-amp-display-2:																true;	//class `.display-2`
+$enable-amp-display-3:																true;	//class `.display-2`
+$enable-amp-display-4:																true;	//class `.display-3`

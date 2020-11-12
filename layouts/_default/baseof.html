@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ⚡ lang="{{.Site.LanguageCode}}">
+	<head>
+		{{- partial "head/base.html" . -}}
+
+		<!-- Link up the script at the bottom of this page for use by amp-script -->
+		{{ $fullscript := resources.Get "nav.js" | minify  | fingerprint }}
+		<meta name="amp-script-src" content="sha384-OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb {{ $fullscript.Data.Integrity }}">
+		<amp-script script=netid layout=container></amp-script>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" target=amp-script id=netid></script>
+	</head>
+	<body>
+		{{- partial "sidebar.html" . -}}
+		{{- partial "page/install-sw.html" . -}}
+		{{- partial "structured-data/base.html" . -}}
+		<div class="content container">
+			<header id="nav" class="nav-transparent">
+				{{- partial "header/base.html" . -}}
+			</header>
+			<main>
+				{{- block "main" . }}{{- end }}
+			</main>
+				{{- partial "footer/base.html" . -}}
+		</div>
+
+		<!-- amp script stuff likes to be at the end of the body -->
+		<amp-script script=script layout=container></amp-script>
+		<script  src="{{ $fullscript.Permalink }}" target=amp-script id=script></script>
+		<amp-script script=fa layout=container></amp-script>
+		{{ $idscript := resources.Get "netlify-identity-redirect.js" | minify | fingerprint }}
+		<amp-script script=idscript layout=container></amp-script>
+		<script  src="{{ $idscript.Permalink }}" target=amp-script id=idscript></script>
+	</body>
+</html>

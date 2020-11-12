@@ -1,0 +1,21 @@
+<nav class="header__menu container level-5">
+    <div class="row m-auto pt-2 pb-2">
+        <i on="tap:sidebar.toggle" title="burger" alt="burger" class="fas fa-bars burger float-right m-auto pl-2 pr-2"></i>
+        <div id="target-element-left"></div>  
+        <div id="header-image">
+            <a class="header__menu__logo" data-rel="prefetch" href="{{ "" | absLangURL }}" aria-label="{{ i18n "goBackHome" }}">
+                <amp-img 
+                src="{{ .Site.Params.logo | absURL }}"
+                width="100"
+                height="100"
+                title="{{ .Site.Params.logoalt }}"
+                alt="{{ .Site.Params.logoalt }}"
+                layout="intrinsic"
+                ></amp-img>
+            </amp-img>
+        </div>
+        <div id="menu-column" class="col">
+            {{- partial "header/menu.html" . -}}
+        </div>
+    </div>
+</nav> 

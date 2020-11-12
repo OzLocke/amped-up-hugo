@@ -1,0 +1,37 @@
+<footer id="footer" class="container">
+    <div class="row">
+        <div class="col-md">
+            <a data-rel="prefetch" href="{{ "" | absLangURL }}" aria-label="{{ i18n "goBackHome" }}">
+                <amp-img src="{{ .Site.Params.footerLogo | absURL }}" width="50" height="50"class="m-0" title="{{ .Site.Params.logoalt }}" alt="{{ .Site.Params.logoalt }}" layout="intrinsic"></amp-img>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            {{ $title := .Site.Title }}
+            {{ range .Site.Params.social }}
+                <a href="{{ index . 1 }}" target="_blank" title="{{ $title }} on {{ index . 0 }}" alt="{{ index . 1 }}"><i class="fab {{ index . 2 }}"></i></a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md  pb-4">
+            <h3 class="m-0">Resources</h3>
+            <ul class="p-0 m-0">
+                {{ range .Site.Menus.resources }}
+                <li class="p-0"><a href="{{ .URL | absLangURL}}" rel="author">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="post-consent-ui">
+                <i on="tap:myUserConsent.prompt()" title="Update consent settings" alt="A cookie!" class="fas fa-cookie-bite"></i>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copyright row copyright text-center ml-auto mr-auto">
+        <p class="m-auto">© {{ .Site.Params.Copyright }} {{ now.Format "2006" }} all rights reserved</p>
+    </div> 
+</footer>

@@ -1,0 +1,12 @@
+<!--  Essential META Tags -->
+
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:image" content="{{ .Site.Params.metaCard | absURL }}" />
+<meta property="og:url" content="{{ .Site.BaseURL }}" />
+<meta name="twitter:card" content="{{ .Site.Params.metaCard | absURL }}" />
+
+<!--  Non-Essential, But Recommended -->
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta name="twitter:image:alt" content="{{ .Site.Title }}" />

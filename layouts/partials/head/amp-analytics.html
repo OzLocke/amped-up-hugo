@@ -1,0 +1,21 @@
+<amp-analytics data-block-on-consent config="https://www.googletagmanager.com/amp.json?id={{.Site.GoogleAnalytics}}&gtm.url={{.Permalink}}" data-credentials="include">
+    <script type="application/json">
+        {
+            "vars" : {
+                "branch": "{{ getenv "BRANCH" }}"
+            },
+            "triggers": {
+                "signup": {
+                  "selector": "#notifybtn",
+                  "on": "click",
+                  "request": "event",
+                  "vars": {
+                    "event_name": "signup",
+                    "method": "Google",
+                    "gtm.event":"gtm.click"
+                  }
+                }
+              }
+        }
+    </script>
+</amp-analytics>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <!-- paginated view for a blog style homepage -->
+    {{ range .Paginator.Pages }}
+        {{- partial "post/summary.html" . -}}
+    {{ end }} 
+        {{- partial "page/pagination.html" . -}}
+
+    <!-- blocks for a component based homepage -->
+    {{ partial "blocks/about.html" . }}
+    {{ partial "blocks/contact.html" . }}
+{{ end }}

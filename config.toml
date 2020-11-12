@@ -1,0 +1,77 @@
+title = "YourSite"
+baseURL = "https://yoursite.com"
+author = "Your Name"
+
+enableEmoji = "true"
+enableInlineShortcodes = "true"
+# googleAnalytics = ""
+languageCode = "en-gb"
+
+# disableKinds = ["taxonomy", "taxonomyTerm"]
+paginate = 9
+
+
+[params]
+fonts = ["https://fonts.googleapis.com/css2?family=Roboto&display=swap", "https://fonts.googleapis.com/css2?family=Goldman&display=swap"]
+logo = "img/yourlogo.png"
+logoalt = "YourSite Logo"
+footerLogo = "img/yourlogo.png"
+description = "Your site description"
+copyright = "Your name"
+metaCard = "img/yourcard.png"
+themeColor = "#fff"
+social = [["Facebook", "https://www.facebook.com/yourfacebook", "fa-facebook"], ["Twitter", "https://twitter.com/yourtwitter", "fa-twitter"]]
+
+
+
+
+# Default AMP components for the whole site
+ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker", "amp-script", "amp-consent", "amp-sidebar", "amp-fit-text", "amp-youtube"]
+
+# SCSS to include
+scss = ["amp-source.scss", "custom.scss"]
+
+# Structured data elements
+socialProfiles = ["https://twitter.com/yourtwitter","https://www.facebook.com/yourfacebook"]
+
+[params.ogp]
+image = "img/yourcard.png"
+description = "Your site description"
+
+
+[[menu.main]]
+    name = "Home"
+    weight = 1
+    identifier = "home"
+    url = ""
+[[menu.main]]
+    name = "About"
+    weight = 2
+    identifier = "about"
+    url = "#about"
+[[menu.main]]
+    name = "Contact"
+    weight = 3
+    identifier = "contact"
+    url = "#contact"
+
+[[menu.resources]]
+    name = "Other thing"
+    weight = 1
+    url = "/other-thing"
+[[menu.resources]]
+    name = "More things"
+    weight = 2
+    url = "/more-things"
+[[menu.resources]]
+    name = "Something on another site"
+    weight = 2
+    url = "https://anothersite.com/something"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[outputFormats.JSON]
+mediaType = "application/json"
+baseName = "manifest"
+isPlainText =  true

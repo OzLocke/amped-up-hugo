@@ -1,0 +1,11 @@
+{{- $icon512 :=  (resources.Get "icons/icon.png").Fit "512x512" -}}
+{
+    "name": "{{ .Site.Title }}",
+    "short_name": "{{ .Site.Title }}",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "{{ .Site.Params.themeColor }}",
+    "description": "{{ .Site.Title }}",
+    "icons":[{"src":"{{ $icon512.Permalink }}","sizes":"512x512","type":"image/png"}]
+  }

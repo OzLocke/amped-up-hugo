@@ -1,0 +1,270 @@
+
+aliases:
+  - &TITLE {label: 'Title', name: 'title', widget: 'string' }
+  - &SUBTITLE {label: 'Subitle', name: 'subtitle', widget: 'string', required: false }
+  - &ID {label: 'Identifier', name: 'id', widget: 'string' }
+  - &AUTHOR {label: 'Author', name: 'author', widget: 'relation', collection: 'team', searchFields: ["title"], valueField: "title"}
+  - &DATE {label: 'Publish Date', name: 'date', widget: 'datetime'}
+  - &DESCRIPTION {label: 'Description', name: 'description', widget: 'string', required: false }
+  - &IMAGE {name: "image", label: "Image", widget: "file", required: false}
+  - &IMAGETITLE {label: 'Image Title', name: 'imgtitle', widget: 'string', required: false }
+  - &IMAGEALT {label: 'Image Alt', name: 'imgalt', widget: 'string', required: false }
+  - &ALT {label: 'Image Alt', name: 'alt', widget: 'string', required: false }
+  - &IMAGECREDIT {label: 'Image Credit', name: 'credit', widget: 'markdown' , required: false}
+  - &CONTENT {label: 'Content', name: 'content', widget: 'markdown' }
+  - &BODY {label: 'Body', name: 'body', widget: 'markdown' }
+  - &TAGS {label: "Tags", name: "tags", widget: 'relation', collection: 'tags', searchFields: ["title"], valueField: "title", multiple: true}
+  - &CATEGORIES {label: "Categories", name: "categories", widget: 'relation', collection: 'categories', searchFields: ["title"], valueField: "title", multiple: true}
+  - &ENABLE {name: "enable", widget: "boolean"}
+  - &LIVE {name: "live", widget: "boolean"}
+  - &LINK {name: "link", widget: "string"}
+  - &LABEL {name: "label", widget: "string"}
+  - &WEIGHT {name: "weight", default: 9, type: "number", valueType: "int"}
+  - &IMAGERESOURCE {name: 'image', label: 'Image',  widget: 'string', hint: "Use the *exact* name for a resource" }
+  - &RESOURCE
+    name: resources
+    label: Resources
+    widget: "list"
+    fields:
+      - {name: 'name', label: 'Name',  widget: 'string', hint: "If this is for a page image, make sure this value matches the page title" }
+      - {name: "src", label: "Image", widget: "file"}
+      - *TITLE
+  - &SOCIAL
+    name: social
+    label: Social links
+    widget: "list"
+    fields:
+      - {name: "service", label: "Service", widget: "string"}
+      - *LINK
+      - {name: 'icon', label: 'Font Awesome icon',  widget: 'string' , hint: "Should be fa-icon with name from https://fontawesome.com/icons?d=gallery&s=brands" }
+  - &POINTS
+    name: points
+    label: Key points
+    widget: "list"
+    fields:
+      - {name: "heading", label: "Title", widget: "string"}
+      - {name: "body", label: "Short text", widget: "string"}
+      - *IMAGE
+      - *ALT
+      - *IMAGECREDIT
+  - &SECTIONS
+    name: sections
+    label: Sections
+    widget: "list"
+    fields:
+      - {name: "heading", label: "Title", widget: "string"}
+      - {name: "body", label: "Content", widget: "markdown"}
+      - *IMAGE
+      - *ALT
+      - *IMAGECREDIT
+      - {name: "fact", label: "Fact/Quote", widget: "string", required: false}
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "static/images" 
+public_folder: "/images"
+collections:
+  - name: homepage
+    label: Homepage
+    files:
+    - name: hero
+      label: Home page - Hero
+      file: data/main/hero.yaml
+      fields:
+        - name: hero
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *SUBTITLE
+            - << : *IMAGE
+            - << : *IMAGETITLE
+            - << : *IMAGEALT
+            - << : *CONTENT
+            - name: button1
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+            - name: button2
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+    - name: grab
+      label: Home page - Grab
+      file: data/main/grab.yaml
+      fields:
+        - name: grab
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *SUBTITLE
+            - << : *IMAGE
+            - << : *IMAGETITLE
+            - << : *IMAGEALT
+            - << : *IMAGECREDIT
+            - << : *CONTENT
+            - name: button
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+    - name: learn
+      label: Home page - Learn
+      file: data/main/learn.yaml
+      fields:
+        - name: learn
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *SUBTITLE
+            - {label: 'Youtube Video ID', name: 'youtube', widget: 'string' }
+            - << : *CONTENT
+            - name: button
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+    - name: tools
+      label: Home page - Tools
+      file: data/main/tools.yaml
+      fields:
+        - name: tools
+          widget: object
+          fields:
+            - << : *TITLE
+    - name: supporters
+      label: Home page - Supporters
+      file: data/main/supporters.yaml
+      fields:
+        - name: supporters
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *CONTENT
+            - name: button
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+    - name: power
+      label: Home page - Benefit
+      file: data/main/power.yaml
+      fields:
+        - name: power
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *SUBTITLE
+            - << : *IMAGE
+            - << : *IMAGETITLE
+            - << : *IMAGEALT
+            - << : *IMAGECREDIT
+            - << : *CONTENT
+            - name: button
+              widget: object
+              fields:
+                - << : *ENABLE
+                - << : *LINK
+                - << : *LABEL
+    - name: who
+      label: Home page - Intro
+      file: data/main/who.yaml
+      fields:
+        - name: who
+          widget: object
+          fields:
+            - << : *TITLE
+            - << : *SUBTITLE
+            - << : *CONTENT
+  - name: quotes
+    label: Quotes
+    folder: content/quotes
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - << : *BODY
+      - *RESOURCE
+      - << : *IMAGERESOURCE
+  - name: supporters
+    label: Supporters
+    folder: content/supporters
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - << : *BODY
+      - *RESOURCE
+      - << : *IMAGERESOURCE
+      - *SOCIAL
+  - name: team
+    label: Team
+    folder: content/team
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - << : *BODY
+      - *RESOURCE
+      - << : *IMAGERESOURCE
+      - *SOCIAL
+  - name: tools
+    label: Tools
+    folder: content/tools
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - *RESOURCE
+      - *POINTS
+      - *SECTIONS
+  - name: focus
+    label: Focus pages
+    folder: content/focus
+    path: '{{slug}}/index'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - *RESOURCE
+      - *POINTS
+      - *SECTIONS
+  - name: newsroom
+    label: Newsroom
+    folder: content/newsroom
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - << : *TITLE
+      - << : *DATE
+      - << : *DESCRIPTION
+      - << : *BODY
+      - *RESOURCE
+      - << : *IMAGERESOURCE

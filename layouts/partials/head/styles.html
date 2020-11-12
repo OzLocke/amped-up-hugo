@@ -1,0 +1,12 @@
+{{ range .Site.Params.fonts }}
+    <link href="{{ . }}" rel="stylesheet">
+{{ end }}
+<style amp-custom>
+    {{- range $.Site.Params.scss -}}
+        {{ if resources.Get . }}
+            {{ with resources.Get . | resources.ToCSS | resources.Minify }}
+                {{ .Content | safeCSS }}
+            {{ end }}
+        {{ end }}
+    {{- end }}
+</style>

@@ -1,0 +1,82 @@
+@import "scss/fontawesome.scss";
+@import "scss/regular.scss";
+@import "scss/solid.scss";
+@import "scss/brands.scss";
+
+/* Define custom variables */
+$customColor: #2d3047;
+
+$headingFont: "Goldman", cursive;
+$bodyFont: "Roboto", sans-serif;
+
+/* prebuilt css */
+body {
+  font-family: $bodyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFont;
+}
+
+.consentPopup {
+  width: 80%;
+}
+
+.burger {
+  display: none !important;
+  color: $customColor;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 994px) {
+  .burger {
+    display: block !important;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+.burger:hover,
+.burger:active,
+.burger:focus,
+.dismiss-button:hover,
+.dismiss-button:focus,
+.dismiss-button:active {
+  color: $customColor;
+  border-style: none;
+  outline-width: 0;
+}
+
+.fa-cookie-bite:hover,
+.fa-cookie-bite:focus,
+.fa-cookie-bite:active {
+  color: $customColor;
+  cursor: pointer;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.container {
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  padding-right: 0.5em;
+  font-size: larger;
+}
+
+/* your css */
+
+footer {
+  background-color: lightgray;
+}

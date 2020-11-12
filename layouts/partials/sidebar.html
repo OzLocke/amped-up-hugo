@@ -1,0 +1,15 @@
+<amp-sidebar id="sidebar" layout="nodisplay" side="left" class="pt-4">
+  <i
+    on="tap:sidebar.close"
+    title="Close sidebar"
+    alt="Close sidebar"
+    class="fas fa-times burger ml-3"
+  ></i>
+  {{ range .Site.Menus.main }}
+  <div>
+    <a href="{{ .URL }}" class="nav-link">
+      <span>{{ .Name }}</span>
+    </a>
+  </div>
+  {{ end }}
+</amp-sidebar>

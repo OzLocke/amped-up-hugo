@@ -1,0 +1,18 @@
+<amp-consent id="myUserConsent"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "consentInstanceId": "consent-id",
+      "consentRequired": true,
+      "promptUI": "consentDialog",
+      "postPromptUI": "post-consent-ui"
+    }
+  </script>
+  <div class="popupOverlay p-4 container" id="consentDialog">
+    <div class="consentPopup m-auto row pb-4">
+        <p class="mr-2">We use Google Analytics to measure our impact to the SME community. To support our analysis, click Accept to allow us to add a cookie tracking your use of this site.</p>
+        <button on="tap:myUserConsent.accept" class="btn btn-sm teal-on-white rounded mr-2">Allow</button>
+        <button on="tap:myUserConsent.reject" class="btn btn-sm white-on-teal rounded">Deny</button>
+    </div>
+  </div>
+</amp-consent>
