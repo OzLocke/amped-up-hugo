@@ -2,7 +2,7 @@
 
 To use this project you'll need to first setup Hugo: https://gohugo.io/getting-started/quick-start/
 
-Then simply clone it to a local folder and you can get to work!
+Then simply download the zip to a local folder and you can get to work!
 
 There's just enough there already to enable you to run the site and have some basic functionality including a nav, and a mobile view...
 
